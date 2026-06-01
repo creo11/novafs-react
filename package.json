@@ -7,9 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:cloudflare": "npm run build && node scripts/publish-cloudflare.mjs",
     "lint": "eslint .",
-    "preview": "vite preview --base /react-app/"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
