@@ -1,0 +1,88 @@
+@import "../../styles/globalVariables.less";
+@navbar-bg: #333;
+@mobile-bg: #444;
+@text-color: white;
+@breakpoint: 768px;
+#mainNav {
+	background-color: rgba(0, 0, 0, 15%);
+	display: flex;
+	flex-flow: column;
+	flex: 1 1 auto;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	transition: all ease .5s;
+    top: 0;
+	&.scrolled {
+		background-color: @nova-color;
+		box-shadow: 0 0 15px #000000cc;
+	}
+	.center-content {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+        .nova-logo {
+            height: 75px;
+            margin: 10px 0;
+        }
+	}
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+	margin: 0;
+	padding: 0;
+    li {
+		display: flex;
+		flex-flow: row;
+		cursor: pointer;
+		&:hover {
+			background-color: #00000022;
+		}
+		a {
+			display: flex;
+			flex-flow: row;
+			align-items: center;	
+			color: @text-color;
+			text-decoration: none;
+			padding: 0 15px;
+		}
+	}
+  }
+
+  #menu-toggle, .hamburger {
+    display: none;
+  }
+
+  @media screen and (max-width: @breakpoint) {
+    .hamburger {
+      font-size: 2rem;
+      cursor: pointer;
+	  color: #fff;
+	  display: flex;
+	  align-items: center;
+    }
+
+    .nav-links {
+      display: none; // Hidden until toggled
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 95px;
+      left: 0;
+      background-color: @mobile-bg;
+
+      li {
+        text-align: center;
+		a {
+			padding: 20px;
+			flex: 1 1 auto;
+		}
+      }
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import "../../styles/globalVariables.less";
+#nova-footer {
+	background: #444;
+	color: #fff;
+	.center-content {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		gap: 0 60px;
+		a {
+			color: @nova-yellow;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.footer-logo {
+			display: flex;
+			flex-flow: 0 0 auto;
+			padding: 15px 0;
+			img {
+				width: 100px;
+			}
+			@media(max-width: 1000px) {
+				flex: 1 1 100%;
+			}
+		}
+		.company-info {
+			display: flex;
+			flex-flow: column;
+			gap: 10px;
+			padding: 15px 0;
+			flex: 1 1 auto;
+			@media(max-width: 1000px) {
+				flex: 1 1 calc(50% - 30px);
+			}
+			@media(max-width: 600px) {
+				flex: 1 1 100%;
+			}
+			.company-name {
+				font-size: 18px;
+				color: @nova-color;
+			}
+			p {
+				margin: 0;
+			}
+			.copyright-text {
+				color: #aaa;
+			}
+		}
+		.contact-info {
+			flex: 0 0 auto;
+			display: flex;
+			flex-flow: column;
+			gap: 10px;
+			padding: 15px 0;
+			text-align: right;
+			@media(max-width: 1000px) {
+				flex: 1 1 calc(50% - 30px);
+			}
+			@media(max-width: 600px) {
+				flex: 1 1 100%;
+				text-align: left;
+			}
+			p, h1 {
+				margin: 0;
+			}
+			.phone-link {
+				font-size: 24px;
+				color: @nova-yellow;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
