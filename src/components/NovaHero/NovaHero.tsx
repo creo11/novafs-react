@@ -4,13 +4,18 @@ import type { HeroConfig } from "../../routes/heroConfig";
 
 import "./NovaHero.less";
 
+import award2023 from "../../assets/home/certifications/ahca-premier-provider-award-2023.png";
+import ahcaCovid from "../../assets/home/certifications/ahca-covid.png";
+import ahcaPhc from "../../assets/home/certifications/ahca-phc.png";
+import ahcaRegistered from "../../assets/home/certifications/ahca-registered-partner.png";
+
 const IMAGE_FADE_MS = 200;
 
 const CERTIFICATIONS = [
-  { src: "/src/assets/home/certifications/ahca-premier-provider-award-2023.png", alt: "AHCA Premier Provider Award 2023" },
-  { src: "/src/assets/home/certifications/ahca-covid.png", alt: "AHCA COVID certification" },
-  { src: "/src/assets/home/certifications/ahca-phc.png", alt: "AHCA PHC certification" },
-  { src: "/src/assets/home/certifications/ahca-registered-partner.png", alt: "AHCA registered partner" },
+  { src: award2023, alt: "AHCA Premier Provider Award 2023" },
+  { src: ahcaCovid, alt: "AHCA COVID certification" },
+  { src: ahcaPhc, alt: "AHCA PHC certification" },
+  { src: ahcaRegistered, alt: "AHCA registered partner" },
 ] as const;
 
 type NovaHeroProps = {
